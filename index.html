@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="reNvision Studios - Empowering Brands through bold marketing consultancy, strategy, storytelling, and design.">
+  <meta name="keywords" content="marketing, branding, consultancy, social media, design, reNvision Studios">
+  <meta name="author" content="Rebecca Nordquist">
+
+  <title>reNvision Studios | Empowering Brands</title>
+
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* ---- WHAT WE DO: SPLIT LAYOUT ---- */
+    .wwd-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .wwd-intro h2 {
+      line-height: 1.1;
+      margin-bottom: 1.25rem;
+    }
+
+    .wwd-intro p {
+      color: var(--gray-medium);
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .wwd-features {
+      display: flex;
+      flex-direction: column;
+      gap: 2.25rem;
+    }
+
+    .wwd-feature {
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+
+    .wwd-icon {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+      opacity: 0.6;
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+    }
+
+    .wwd-feature h4 {
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+      letter-spacing: 0.02em;
+      color: var(--gray-dark);
+    }
+
+    .wwd-feature p {
+      font-size: 0.9rem;
+      color: var(--gray-medium);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .wwd-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+    }
+
+    /* ---- SERVICES ICON GRID ---- */
+    .services-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .service-feature {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .service-feature img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+      opacity: 0.55;
+    }
+
+    .service-feature span {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-medium);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="images/logos/reNvisionOrange - Main Horizontal .png" alt="reNvision Studios" class="logo-img">
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li><a href="contact.html" class="nav-link btn btn-primary" style="color: white;">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-icons">
+        <img src="images/design-elements/reNvisionCamera Black.png" alt="" class="hero-icon-img invert">
+        <img src="images/design-elements/reNvisionPencil White.png" alt="" class="hero-icon-img">
+        <img src="images/design-elements/reNvisionGrid White .png" alt="" class="hero-icon-img">
+      </div>
+
+      <p class="subheading">EST. 2025 &nbsp;·&nbsp; LAS CRUCES, NM</p>
+      <h1>reNvision Studios</h1>
+      <p class="subheading mb-lg">FROM VISION TO REALITY</p>
+
+      <p style="font-size: 1.25rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+        A forward-thinking marketing &amp; photography consultancy helping businesses build their brand identity and grow through creative, customized solutions.
+      </p>
+
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="services.html" class="btn btn-primary">Explore Our Services</a>
+        <a href="contact.html" class="btn btn-secondary" style="background-color: white; color: var(--coral-primary); border-color: white;">Get In Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER STRIP -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span class="ticker-item">Social Media Management</span>
+      <span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+      <span class="ticker-item">Logo &amp; Brand Creation</span>
+      <span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+      <span class="ticker-item">Marketing Materials</span>
+      <span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+      <span class="ticker-item">Email Management</span>
+      <span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+      <span class="ticker-item">Business Photography</span>
+      <span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+      <span class="ticker-item">Videography</span>
+      <span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+      <span class="ticker-item">Las Cruces, NM</span>
+      <span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+      <span class="ticker-item">Free Consultation</span>
+      <span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+      <!-- duplicate for seamless loop -->
+      <span class="ticker-item">Social Media Marketing</span>
+      <span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+      <span class="ticker-item">Logo &amp; Brand Creation</span>
+      <span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+      <span class="ticker-item">Marketing Materials</span>
+      <span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+      <span class="ticker-item">Email Campaigns</span>
+      <span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+      <span class="ticker-item">Business Photography</span>
+      <span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+      <span class="ticker-item">Videography</span>
+      <span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+      <span class="ticker-item">Las Cruces, NM</span>
+      <span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+      <span class="ticker-item">Free Consultation</span>
+      <span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- WHAT WE DO — SPLIT LAYOUT -->
+  <section class="section">
+    <div class="container">
+      <div class="wwd-grid">
+
+        <div class="wwd-intro anim">
+          <p class="subheading" style="color: var(--coral-primary);">WHAT WE DO</p>
+          <h2>From Vision<br>to Reality.</h2>
+          <p>reNvision helps businesses communicate their story, build trust, and thrive in today's competitive market — through creative branding, marketing, and photography tailored to your goals.</p>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem;">
+            <a href="about.html" class="btn btn-secondary">Our Story</a>
+            <a href="services.html" class="btn btn-primary">View All Services</a>
+          </div>
+        </div>
+
+        <div class="wwd-features">
+          <div class="wwd-feature anim anim-delay-1">
+            <img src="images/design-elements/reNvisionGrid Black.png" alt="" class="wwd-icon">
+            <div>
+              <h4>Bold Strategy</h4>
+              <p>We don't follow trends — we set them. Every plan is built to make your brand stand out, not blend in.</p>
+            </div>
+          </div>
+
+          <div class="wwd-feature anim anim-delay-2">
+            <img src="images/design-elements/reNvisionPencil Black.png" alt="" class="wwd-icon">
+            <div>
+              <h4>Authentic Storytelling</h4>
+              <p>Every brand has a unique story worth telling boldly. We craft narratives that connect and convert.</p>
+            </div>
+          </div>
+
+          <div class="wwd-feature anim anim-delay-3">
+            <img src="images/design-elements/reNvisionRuler Black.png" alt="" class="wwd-icon">
+            <div>
+              <h4>Design That Converts</h4>
+              <p>Beautiful design is just the start. Our work is built to drive action and deliver measurable results.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item anim anim-delay-1">
+          <span class="stat-number">7+</span>
+          <span class="stat-label">Services</span>
+        </div>
+        <div class="stat-item anim anim-delay-2">
+          <span class="stat-number">3</span>
+          <span class="stat-label">Brands Built</span>
+        </div>
+        <div class="stat-item anim anim-delay-3">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Commitment</span>
+        </div>
+        <div class="stat-item anim anim-delay-4">
+          <span class="stat-number">Free</span>
+          <span class="stat-label">Consultation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA SECTION -->
+  <section class="section section-coral">
+    <div class="container text-center">
+      <h2 style="color: white;" class="mb-md">Let's Build Your Brand Together</h2>
+      <p style="font-size: 1.125rem; max-width: 700px; margin: 0 auto 2rem auto;">
+        In your free 45-minute consultation, we'll discuss your goals, explore your current strategy, and map out the next steps for your brand.
+      </p>
+      <a href="contact.html" class="btn" style="background-color: white; color: var(--coral-primary); border-color: white;">Book Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <img src="images/logos/reNvisionWhite - Main Horizontal.png" alt="reNvision Studios" class="footer-logo">
+      <div class="footer-links">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="about.html" class="footer-link">About</a>
+        <a href="services.html" class="footer-link">Services</a>
+        <a href="portfolio.html" class="footer-link">Portfolio</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 reNvision Studios. All rights reserved. | Empowering Brands</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top-btn" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>

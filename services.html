@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="reNvision Studios services — social media, branding, photography, videography, and more.">
+  <title>Services | reNvision Studios</title>
+
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* ---- HERO ---- */
+    .services-hero {
+      padding: 150px 0 90px;
+      background: linear-gradient(160deg, var(--pink-light) 0%, var(--beige) 100%);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .services-hero-inner {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-bg-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: var(--font-heading);
+      font-size: clamp(5rem, 18vw, 14rem);
+      font-weight: 900;
+      color: rgba(235, 109, 82, 0.07);
+      white-space: nowrap;
+      pointer-events: none;
+      letter-spacing: 0.08em;
+      z-index: 0;
+      user-select: none;
+    }
+
+    .services-hero-sub {
+      font-size: 1.1rem;
+      color: var(--gray-medium);
+      max-width: 560px;
+      margin: 0.5rem auto 0;
+    }
+
+    /* ---- SERVICE CARDS ---- */
+    .offerings-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-md);
+    }
+
+    @media (max-width: 900px) {
+      .offerings-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .offerings-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .offering-card {
+      background-color: var(--white);
+      border-radius: var(--border-radius);
+      padding: 2.5rem 2rem;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+      transition: var(--transition);
+      height: 100%;
+      border-top: 4px solid transparent;
+    }
+
+    .offering-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+      border-top-color: var(--coral-primary);
+    }
+
+    .offering-card .icon {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 1.25rem;
+      object-fit: contain;
+      opacity: 0.65;
+    }
+
+    .offering-card h3 {
+      font-size: 1.15rem;
+      color: var(--gray-dark);
+      margin-bottom: 0.6rem;
+    }
+
+    .offering-card p {
+      color: var(--gray-medium);
+      font-size: 0.92rem;
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    /* ---- PRICING NOTE ---- */
+    .pricing-note {
+      margin-top: 4rem;
+      text-align: center;
+      font-size: 0.8rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gray-medium);
+    }
+
+    .pricing-note strong {
+      color: var(--coral-primary);
+    }
+
+    /* ---- PROCESS SECTION ---- */
+    .process-section {
+      background-color: var(--gray-dark);
+      padding: var(--spacing-xl) 0;
+      color: var(--white);
+    }
+
+    .process-section .subheading {
+      color: var(--coral-primary);
+    }
+
+    .process-section h2 {
+      color: var(--white);
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-lg);
+      position: relative;
+    }
+
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 2.9rem;
+      left: 12%;
+      right: 12%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(235,109,82,0.5), rgba(235,109,82,0.5), transparent);
+      z-index: 0;
+    }
+
+    .process-step {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .step-number {
+      font-family: var(--font-heading);
+      font-size: clamp(3rem, 5vw, 4.5rem);
+      font-weight: 900;
+      color: rgba(255,255,255,0.06);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .step-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: var(--coral-primary);
+      margin: 0 auto 1.25rem;
+      box-shadow: 0 0 0 5px rgba(235,109,82,0.2);
+    }
+
+    .process-step h3 {
+      font-size: 1.05rem;
+      color: var(--white);
+      margin-bottom: 0.6rem;
+      font-weight: 700;
+    }
+
+    .process-step p {
+      font-size: 0.87rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .process-steps {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+      }
+      .process-steps::before {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .process-steps {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="images/logos/reNvisionOrange - Main Horizontal .png" alt="reNvision Studios" class="logo-img">
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link active">Services</a></li>
+        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li><a href="contact.html" class="nav-link btn btn-primary" style="color: white;">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="services-hero">
+    <span class="hero-bg-text" aria-hidden="true">SERVICES</span>
+    <div class="container">
+      <div class="services-hero-inner">
+        <p class="subheading" style="color: var(--coral-primary);">MARKETING &amp; PHOTOGRAPHY</p>
+        <h1>Our Services</h1>
+        <p class="services-hero-sub">A full suite of creative services designed to boost your brand's visibility and leave a lasting impression.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE CARDS -->
+  <section class="section" style="background: linear-gradient(180deg, var(--beige) 0%, var(--white) 100%);">
+    <div class="container">
+
+      <div class="offerings-grid">
+
+        <div class="offering-card anim anim-delay-1">
+          <img src="images/design-elements/reNvisionGrid Black.png" class="icon" alt="">
+          <h3>Social Media Marketing</h3>
+          <p>In today's digital landscape, social media is a powerful tool for connecting with your audience and driving real engagement.</p>
+          <ul class="service-list">
+            <li>Content Creation</li>
+            <li>Platform Management</li>
+            <li>Ad Campaigns</li>
+            <li>Analytics &amp; Optimization</li>
+          </ul>
+        </div>
+
+        <div class="offering-card anim anim-delay-2">
+          <img src="images/design-elements/reNvisionPencil Black.png" class="icon" alt="">
+          <h3>Logo &amp; Brand Creation</h3>
+          <p>Your brand is more than just a logo — it's the visual story that connects you with your audience and builds lasting trust.</p>
+          <ul class="service-list">
+            <li>Brand Naming</li>
+            <li>Custom Logo Design</li>
+            <li>Brand Guidelines</li>
+            <li>Visual Identity Development</li>
+            <li>Rebranding</li>
+          </ul>
+        </div>
+
+        <div class="offering-card anim anim-delay-3">
+          <img src="images/design-elements/reNvisionRuler Black.png" class="icon" alt="">
+          <h3>Branded Materials</h3>
+          <p>Branded materials increase visibility, foster loyalty, and create memorable experiences for your customers.</p>
+          <ul class="service-list">
+            <li>Business Cards &amp; Stationery</li>
+            <li>Custom Apparel</li>
+            <li>Branded Packaging</li>
+            <li>Promotional Products</li>
+            <li>Employee Merchandise</li>
+          </ul>
+        </div>
+
+        <div class="offering-card anim anim-delay-1">
+          <img src="images/design-elements/reNvisionEraser Black .png" class="icon" alt="">
+          <h3>Email Management</h3>
+          <p>Thoughtfully crafted email campaigns that nurture your audience, build loyalty, and convert readers into customers.</p>
+        </div>
+
+        <div class="offering-card anim anim-delay-2">
+          <img src="images/design-elements/reNvisionCamera Black.png" class="icon" alt="">
+          <h3>Business Photography</h3>
+          <p>Photography done in service of your marketing — product shots, commercial spaces, and brand imagery that gives every campaign a professional edge.</p>
+        </div>
+
+        <div class="offering-card anim anim-delay-3">
+          <img src="images/design-elements/reNvisionCamera Black.png" class="icon" alt="">
+          <h3>Videography</h3>
+          <p>Testimonials, reels, and narrative films that bring your brand story to life and perform across every platform.</p>
+        </div>
+
+      </div>
+
+      <!-- AND MORE -->
+      <div style="margin-top: 4rem; padding: 2.5rem; background: var(--beige); border-radius: var(--border-radius); text-align: center; border-left: 4px solid var(--coral-primary);">
+        <p class="subheading" style="color: var(--coral-primary); margin-bottom: 0.5rem;">AND SO MUCH MORE</p>
+        <p style="font-size: 1rem; color: var(--gray-medium); max-width: 600px; margin: 0 auto 0.5rem; line-height: 1.8;">
+          Signage, digital ads, presentation decks, trade show materials, banners — if you need a marketing asset, it can be made. Don't see what you need? Just ask.
+        </p>
+        <a href="contact.html" class="btn btn-primary" style="margin-top: 1.25rem;">Let's Talk</a>
+      </div>
+
+      <p class="pricing-note" style="margin-top: 2.5rem;">Consultation required for pricing &nbsp;&middot;&nbsp; <strong>First consultation is always free</strong></p>
+    </div>
+  </section>
+
+  <!-- HOW WE WORK -->
+  <section class="process-section">
+    <div class="container">
+      <p class="subheading text-center">THE PROCESS</p>
+      <h2 class="text-center">How We Work</h2>
+
+      <div class="process-steps">
+
+        <div class="process-step anim anim-delay-1">
+          <div class="step-number">01</div>
+          <div class="step-dot"></div>
+          <h3>Discover</h3>
+          <p>We get to know your brand, your goals, and your audience — understanding what makes you genuinely different.</p>
+        </div>
+
+        <div class="process-step anim anim-delay-2">
+          <div class="step-number">02</div>
+          <div class="step-dot"></div>
+          <h3>Strategize</h3>
+          <p>From insight to action. We build a bold, custom plan designed to make your brand impossible to ignore.</p>
+        </div>
+
+        <div class="process-step anim anim-delay-3">
+          <div class="step-number">03</div>
+          <div class="step-dot"></div>
+          <h3>Create</h3>
+          <p>Strategy meets design. We craft visuals, content, and campaigns that bring your brand story to life.</p>
+        </div>
+
+        <div class="process-step anim anim-delay-4">
+          <div class="step-number">04</div>
+          <div class="step-dot"></div>
+          <h3>Launch &amp; Grow</h3>
+          <p>We execute, measure, and refine — ensuring your brand keeps evolving and your results keep growing.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section-coral">
+    <div class="container text-center">
+      <h2 style="color: white;" class="mb-md">Ready to reNvision Your Brand?</h2>
+      <p style="font-size: 1.125rem; max-width: 700px; margin: 0 auto 2rem auto;">
+        Start with a free 45-minute consultation. We'll discuss your goals, explore your current strategy, and identify the right services for your business.
+      </p>
+      <a href="contact.html" class="btn" style="background-color: white; color: var(--coral-primary); border-color: white;">Book Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <img src="images/logos/reNvisionWhite - Main Horizontal.png" alt="reNvision Studios" class="footer-logo">
+      <div class="footer-links">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="about.html" class="footer-link">About</a>
+        <a href="services.html" class="footer-link">Services</a>
+        <a href="portfolio.html" class="footer-link">Portfolio</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 reNvision Studios. All rights reserved. | Empowering Brands</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top-btn" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

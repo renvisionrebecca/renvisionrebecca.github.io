@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about reNvision Studios and founder Rebecca Nordquist's mission to empower bold brands.">
+  <meta name="keywords" content="Rebecca Nordquist, about, reNvision Studios, marketing consultancy">
+
+  <title>About Us | reNvision Studios</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .about-hero {
+      padding: 120px 0 80px;
+      background-color: var(--pink-light);
+      text-align: center;
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      margin-top: 4rem;
+    }
+
+    .about-image {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: var(--border-radius);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .about-text {
+      text-align: left;
+    }
+
+    .about-quote {
+      font-size: 1.25rem;
+      line-height: 1.8;
+      font-style: italic;
+      color: var(--gray-dark);
+      margin-bottom: 2rem;
+      position: relative;
+      padding-left: 2rem;
+      border-left: 4px solid var(--coral-primary);
+    }
+
+    .about-author {
+      font-weight: 600;
+      color: var(--gray-dark);
+      margin-top: 1rem;
+    }
+
+    .about-title {
+      color: var(--gray-medium);
+      font-size: 1rem;
+    }
+
+    .values-section {
+      margin-top: 6rem;
+    }
+
+    .value-card {
+      background-color: var(--white);
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .value-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .value-card h3 {
+      color: var(--coral-primary);
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .about-image {
+        max-width: 100%;
+      }
+
+      .about-quote {
+        font-size: 1.125rem;
+        padding-left: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="images/logos/reNvisionOrange - Main Horizontal .png" alt="reNvision Studios" class="logo-img">
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li><a href="contact.html" class="nav-link btn btn-primary" style="color: white;">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ABOUT HERO -->
+  <section class="about-hero">
+    <div class="container">
+      <p class="subheading" style="color: var(--coral-primary);">LAS CRUCES, NEW MEXICO</p>
+      <h1>About Rebecca</h1>
+    </div>
+  </section>
+
+  <!-- ABOUT CONTENT -->
+  <section class="section">
+    <div class="container">
+      <div class="about-content">
+        <!-- Image Placeholder - You can replace this with an actual image -->
+        <div>
+          <img src="images/about-workspace.jpg" alt="reNvision Studios workspace" class="about-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <div style="display: none; width: 100%; max-width: 500px; height: 400px; background: linear-gradient(135deg, var(--pink-light), var(--beige)); border-radius: var(--border-radius); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15); display: flex; align-items: center; justify-content: center; color: var(--gray-medium); font-style: italic;">
+            [Workspace Image]
+          </div>
+        </div>
+
+        <!-- Quote and Info -->
+        <div class="about-text">
+          <p style="font-size: 1.1rem; font-weight: 700; color: var(--coral-primary); margin-bottom: 0.5rem; letter-spacing: 0.02em;">Hi, I'm Rebecca Nordquist.</p>
+
+          <blockquote class="about-quote">
+            "I'm the founder and CEO of reNvision — a forward-thinking marketing consultancy local to the Las Cruces, New Mexico area. I started reNvision to help businesses develop their brand identity and grow through creative, customized solutions. My background in photography adds a unique dimension to every project, giving clients high-quality visuals that genuinely elevate their brand."
+          </blockquote>
+
+          <p style="color: var(--gray-medium); font-size: 0.95rem; line-height: 1.8; margin-bottom: 1.5rem;">
+            From crafting brand identities to designing effective advertising campaigns, I bring the latest marketing strategies and a deep understanding of modern branding to every client — with a fresh perspective and a love for Las Cruces.
+          </p>
+
+          <p class="about-author">Rebecca Nordquist</p>
+          <p class="about-title">Founder &amp; CEO, reNvision Studios</p>
+
+          <div class="mt-lg">
+            <a href="contact.html" class="btn btn-primary">Work With Us</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- What Sets Us Apart -->
+      <div class="values-section">
+        <h2 class="text-center mb-lg">What Sets Us Apart</h2>
+
+        <div class="grid grid-3">
+          <div class="value-card anim anim-delay-1">
+            <h3>You Work With Rebecca, Directly</h3>
+            <p>No account managers, no handoffs to juniors. You get the founder's full attention on every project — from the first call to final delivery.</p>
+          </div>
+
+          <div class="value-card anim anim-delay-2">
+            <h3>No Templates, Ever</h3>
+            <p>Every strategy, design, and campaign is built from scratch around your brand, your goals, and your audience. Cookie-cutter doesn't exist here.</p>
+          </div>
+
+          <div class="value-card anim anim-delay-3">
+            <h3>Built for the Long Game</h3>
+            <p>We don't optimize for vanity metrics. The focus is on building brand equity and trust that compounds — and converts — over time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="section section-coral">
+    <div class="container text-center">
+      <h2 style="color: white;" class="mb-md">Let's Discuss Your Goals</h2>
+      <p style="font-size: 1.125rem; max-width: 700px; margin: 0 auto 2rem auto;">
+        Your business deserves a tailored approach. Book a free 45-minute consultation and let's build a winning strategy together.
+      </p>
+      <a href="contact.html" class="btn" style="background-color: white; color: var(--coral-primary); border-color: white;">Book Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <img src="images/logos/reNvisionWhite - Main Horizontal.png" alt="reNvision Studios" class="footer-logo">
+      <div class="footer-links">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="about.html" class="footer-link">About</a>
+        <a href="services.html" class="footer-link">Services</a>
+        <a href="portfolio.html" class="footer-link">Portfolio</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 reNvision Studios. All rights reserved. | Empowering Brands</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <!-- Scroll to top -->
+  <button class="scroll-top-btn" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>

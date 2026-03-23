@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="reNvision Studios portfolio — branding, marketing materials, and photography for real clients.">
+  <title>Portfolio | reNvision Studios</title>
+
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* ---- HERO ---- */
+    .portfolio-hero {
+      padding: 140px 0 80px;
+      background-color: var(--coral-primary);
+      text-align: center;
+      color: var(--white);
+    }
+    .portfolio-hero h1 { color: var(--white); }
+
+    /* ---- SECTION DIVIDERS ---- */
+    .section-divider {
+      background-color: var(--gray-dark);
+      padding: 4rem 2rem;
+      color: var(--white);
+    }
+    .section-divider h2 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      color: var(--white);
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+    .section-divider .sub {
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      color: var(--coral-primary);
+    }
+
+    /* ---- TAB NAV ---- */
+    .portfolio-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      padding: 1.5rem 2rem;
+      background-color: var(--beige);
+      position: sticky;
+      top: 70px;
+      z-index: 100;
+      border-bottom: 1px solid var(--gray-light);
+    }
+    .tab-btn {
+      padding: 0.55rem 1.4rem;
+      border: 2px solid var(--coral-primary);
+      border-radius: 50px;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      background: transparent;
+      color: var(--coral-primary);
+      transition: var(--transition);
+      text-decoration: none;
+    }
+    .tab-btn:hover, .tab-btn.active {
+      background-color: var(--coral-primary);
+      color: var(--white);
+    }
+
+    /* ---- BRANDING: AMBIANCE MASONRY ---- */
+    .brand-intro {
+      display: flex;
+      align-items: baseline;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    .brand-intro h3 { margin: 0; }
+    .brand-intro-meta {
+      font-size: 0.8rem;
+      color: var(--gray-medium);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+    }
+    .ambiance-masonry {
+      columns: 3;
+      column-gap: 0.75rem;
+    }
+    .ambiance-masonry img {
+      width: 100%;
+      margin-bottom: 0.75rem;
+      display: block;
+      border-radius: var(--border-radius);
+      break-inside: avoid;
+      transition: transform 0.3s ease;
+    }
+    .ambiance-masonry img:hover { transform: scale(1.01); }
+    @media (max-width: 768px) { .ambiance-masonry { columns: 2; } }
+    @media (max-width: 480px) { .ambiance-masonry { columns: 1; } }
+
+    /* ---- BRANDING: COLOR SWATCH CARDS ---- */
+    .branding-also {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--spacing-md);
+      margin-top: 5rem;
+    }
+    .branding-swatch-card {
+      background: var(--white);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    }
+    .swatch-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .swatch-block {
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      font-size: 0.9rem;
+    }
+    .swatch-meta {
+      padding: 1.5rem;
+    }
+    .swatch-meta h4 { margin-bottom: 0.3rem; font-size: 1.1rem; }
+    .swatch-meta p {
+      font-size: 0.82rem;
+      color: var(--gray-medium);
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .color-dots {
+      display: flex;
+      gap: 0.6rem;
+    }
+    .color-dot {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1px solid rgba(0,0,0,0.08);
+    }
+
+    /* ---- MARKETING MATERIALS ---- */
+    .mkt-subsection { margin-bottom: 4rem; }
+    .mkt-subsection:last-child { margin-bottom: 0; }
+    .mkt-client-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--coral-primary);
+      margin-bottom: 0.2rem;
+    }
+    .mkt-type-heading {
+      font-family: var(--font-heading);
+      font-size: clamp(1.4rem, 2.5vw, 1.75rem);
+      color: var(--gray-dark);
+      margin-bottom: 1.5rem;
+    }
+    .mkt-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    .mkt-grid-3 img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: var(--border-radius);
+      transition: transform 0.3s ease;
+      display: block;
+    }
+    .mkt-grid-3 img:hover { transform: scale(1.02); }
+
+    .mkt-singles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .mkt-single img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: var(--border-radius);
+      transition: transform 0.3s ease;
+      display: block;
+    }
+    .mkt-single img:hover { transform: scale(1.02); }
+    .mkt-single-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-medium);
+      margin-top: 0.75rem;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .mkt-grid-3 {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+      }
+      .mkt-grid-3 img { height: 240px; }
+      .mkt-singles { grid-template-columns: 1fr; gap: 1.5rem; }
+      .mkt-single img { height: 260px; }
+    }
+
+    /* ---- PHOTOGRAPHY ---- */
+    .photo-client { margin-bottom: 4rem; }
+    .photo-client:last-child { margin-bottom: 0; }
+    .photo-client-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--coral-primary);
+      margin-bottom: 0.2rem;
+    }
+    .photo-client-name {
+      font-family: var(--font-heading);
+      font-size: clamp(1.4rem, 2.5vw, 1.75rem);
+      color: var(--gray-dark);
+      margin-bottom: 1.5rem;
+    }
+    .photo-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    .photo-grid-2 img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border-radius: var(--border-radius);
+      transition: transform 0.3s ease;
+      display: block;
+    }
+    .photo-grid-2 img:hover { transform: scale(1.01); }
+    @media (max-width: 640px) {
+      .photo-grid-2 { grid-template-columns: 1fr; }
+      .photo-grid-2 img { height: 260px; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="images/logos/reNvisionOrange - Main Horizontal .png" alt="reNvision Studios" class="logo-img">
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+        <li><a href="contact.html" class="nav-link btn btn-primary" style="color: white;">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="portfolio-hero">
+    <div class="container">
+      <p class="subheading" style="opacity: 0.8;">OUR WORK</p>
+      <h1>Portfolio</h1>
+    </div>
+  </section>
+
+  <!-- TAB NAV -->
+  <div class="portfolio-tabs">
+    <a href="#branding" class="tab-btn">Branding</a>
+    <a href="#marketing" class="tab-btn">Marketing Materials</a>
+  </div>
+
+  <!-- ================================
+       BRANDING
+  ================================ -->
+  <div id="branding" class="section-divider">
+    <div class="container">
+      <h2>Branding</h2>
+      <p class="sub">Brand Identity &amp; Visual Design</p>
+    </div>
+  </div>
+
+  <section class="section section-light">
+    <div class="container">
+
+      <!-- Ambiance Creative — Featured -->
+      <div class="brand-intro anim">
+        <h3>Ambiance Creative</h3>
+        <span class="brand-intro-meta">Home Inspired — Full Brand Identity</span>
+      </div>
+
+      <div class="ambiance-masonry anim anim-delay-1">
+        <img src="images/portfolio/branding/ambiance/2.jpg" alt="Ambiance Creative logo">
+        <img src="images/portfolio/branding/ambiance/3.jpg" alt="Ambiance Creative business card">
+        <img src="images/portfolio/branding/ambiance/5.jpg" alt="Ambiance Creative product label">
+        <img src="images/portfolio/branding/ambiance/1.jpg" alt="Ambiance Creative branded bag">
+        <img src="images/portfolio/branding/ambiance/4.jpg" alt="Ambiance Creative brand lifestyle">
+        <img src="images/portfolio/branding/ambiance/6.jpg" alt="Ambiance Creative stationery">
+      </div>
+
+      <!-- Color swatches for Ambiance Creative -->
+      <div style="margin-top: 1.5rem; display: flex; gap: 0.6rem; flex-wrap: wrap;">
+        <div class="color-dot" style="background: #2d6a6a;"></div>
+        <div class="color-dot" style="background: #a8d4d4;"></div>
+        <div class="color-dot" style="background: #c4806a;"></div>
+        <div class="color-dot" style="background: #e8b8b0;"></div>
+        <div class="color-dot" style="background: #f5e8e4;"></div>
+      </div>
+
+      <!-- Also done -->
+      <div class="branding-also">
+
+        <div class="branding-swatch-card anim anim-delay-1">
+          <div class="swatch-header">
+            <div class="swatch-block" style="background:#cc2222; color:white; font-family:'Montserrat',sans-serif;">ABOVE THE<br>MARK</div>
+            <div class="swatch-block" style="background:#1a3a4a; color:white; font-family:'Montserrat',sans-serif;">ABOVE THE<br>MARK</div>
+          </div>
+          <div class="swatch-meta">
+            <h4>Above the Mark</h4>
+            <p>Heating &amp; Cooling — Brand Identity</p>
+            <div class="color-dots">
+              <div class="color-dot" style="background:#cc2222;"></div>
+              <div class="color-dot" style="background:#1a3a4a;"></div>
+              <div class="color-dot" style="background:#9e9e9e;"></div>
+              <div class="color-dot" style="background:#ffffff; border:1px solid #ddd;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="branding-swatch-card anim anim-delay-2">
+          <div class="swatch-header">
+            <div class="swatch-block" style="background:var(--coral-primary);">
+              <img src="images/logos/reNvisionWhite - Main Monogram.png" style="max-height:80px; object-fit:contain;" alt="reNvision monogram">
+            </div>
+            <div class="swatch-block" style="background:var(--pink-light);">
+              <img src="images/logos/reNvisionBlack - Main Monogram.png" style="max-height:80px; object-fit:contain;" alt="reNvision monogram">
+            </div>
+          </div>
+          <div class="swatch-meta">
+            <h4>reNvision Studios</h4>
+            <p>Empowering Brands — Brand Identity</p>
+            <div class="color-dots">
+              <div class="color-dot" style="background:#EB6D52;"></div>
+              <div class="color-dot" style="background:#E8D5D1;"></div>
+              <div class="color-dot" style="background:#F5F0ED;"></div>
+              <div class="color-dot" style="background:#2C2C2C;"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================
+       MARKETING MATERIALS
+  ================================ -->
+  <div id="marketing" class="section-divider">
+    <div class="container">
+      <h2>Marketing</h2>
+      <p class="sub">Marketing Materials &amp; Campaigns</p>
+    </div>
+  </div>
+
+  <section class="section section-light">
+    <div class="container">
+
+      <!-- EDDM -->
+      <div class="mkt-subsection anim">
+        <p class="mkt-client-label">Edifice Structures</p>
+        <h3 class="mkt-type-heading">Every Door Direct Mail</h3>
+        <div class="mkt-grid-3">
+          <img src="images/portfolio/marketing/eddm/1.jpg" alt="Edifice EDDM postcard — We're Right Here In Las Cruces">
+          <img src="images/portfolio/marketing/eddm/2.jpg" alt="Edifice EDDM — Step Into Comfort">
+          <img src="images/portfolio/marketing/eddm/3.jpg" alt="Edifice EDDM — You Can Count On Us">
+        </div>
+      </div>
+
+      <!-- Email + Social + Catalog -->
+      <div class="mkt-subsection anim">
+        <p class="mkt-client-label">Edifice Structures</p>
+        <h3 class="mkt-type-heading">Email, Social Media &amp; Catalog</h3>
+        <div class="mkt-singles">
+          <div class="mkt-single">
+            <img src="images/portfolio/marketing/email/email.jpg" alt="Edifice email campaign — Spring Cleaning">
+            <p class="mkt-single-label">Email Campaign</p>
+          </div>
+          <div class="mkt-single">
+            <img src="images/portfolio/marketing/social/social.jpg" alt="Edifice Structures Instagram feed management">
+            <p class="mkt-single-label">Social Media Management</p>
+          </div>
+          <div class="mkt-single">
+            <img src="images/portfolio/marketing/catalogs/catalog.png" alt="Edifice Structures product catalog">
+            <p class="mkt-single-label">Product Catalog</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photography done for Edifice -->
+      <div class="mkt-subsection anim">
+        <p class="mkt-client-label">Edifice Structures</p>
+        <h3 class="mkt-type-heading">Photography for Marketing</h3>
+        <div class="photo-grid-2">
+          <img src="images/portfolio/photography/edifice/1.jpg" alt="Edifice Structures — commercial space photography">
+          <img src="images/portfolio/photography/edifice/2.jpg" alt="Edifice Structures — product/installation photography">
+        </div>
+      </div>
+
+      <!-- Artesia Woodworks -->
+      <div class="mkt-subsection anim">
+        <p class="mkt-client-label">Artesia Woodworks</p>
+        <h3 class="mkt-type-heading">Photography for Marketing</h3>
+        <div class="photo-grid-2">
+          <img src="images/portfolio/photography/artesia/1.jpg" alt="Artesia Woodworks — custom kitchen photography">
+          <img src="images/portfolio/photography/artesia/2.jpg" alt="Artesia Woodworks — commercial interior photography">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section-coral">
+    <div class="container text-center">
+      <h2 style="color: white;" class="mb-md">Like What You See?</h2>
+      <p style="font-size: 1.125rem; max-width: 700px; margin: 0 auto 2rem auto;">
+        Let's create something great for your brand. Book a free 45-minute consultation today.
+      </p>
+      <a href="contact.html" class="btn" style="background-color: white; color: var(--coral-primary); border-color: white;">Book Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <img src="images/logos/reNvisionWhite - Main Horizontal.png" alt="reNvision Studios" class="footer-logo">
+      <div class="footer-links">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="about.html" class="footer-link">About</a>
+        <a href="services.html" class="footer-link">Services</a>
+        <a href="portfolio.html" class="footer-link">Portfolio</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 reNvision Studios. All rights reserved. | Empowering Brands</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top-btn" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
