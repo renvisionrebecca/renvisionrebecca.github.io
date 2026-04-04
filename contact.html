@@ -250,5 +250,12 @@
   </button>
 
   <script src="js/script.js"></script>
+  <script>
+    window.addEventListener('pageshow', function(e) {
+      if (e.persisted) {
+        document.querySelector('.contact-form').reset();
+      }
+    });
+  </script>
 </body>
 </html>
