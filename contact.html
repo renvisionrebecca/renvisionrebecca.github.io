@@ -207,7 +207,7 @@
 
       <div style="margin-top: 3rem;">
         <p class="contact-label" style="margin-bottom: 1.5rem;">Or send a message directly</p>
-        <form class="contact-form" action="https://formspree.io/f/meeprdyo" method="POST">
+        <form class="contact-form" id="contact-form">
           <div class="form-group">
             <input type="text" name="name" placeholder="Your Name" required class="form-input">
           </div>
@@ -222,6 +222,9 @@
           </div>
           <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
         </form>
+        <div id="form-success" style="display:none; margin-top: 1.5rem; padding: 1rem 1.25rem; background: #f0faf0; border-left: 4px solid #4caf50; border-radius: var(--border-radius); color: #2e7d32; font-weight: 600;">
+          Message sent! Rebecca will be in touch soon.
+        </div>
       </div>
 
     </div>
@@ -251,10 +254,21 @@
 
   <script src="js/script.js"></script>
   <script>
-    window.addEventListener('pageshow', function(e) {
-      if (e.persisted) {
-        document.querySelector('.contact-form').reset();
-      }
+    var form = document.getElementById('contact-form');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var data = new FormData(form);
+      fetch('https://formspree.io/f/xjgpadgp', {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(function(res) {
+        if (res.ok) {
+          form.style.display = 'none';
+          document.getElementById('form-success').style.display = 'block';
+          form.reset();
+        }
+      });
     });
   </script>
 </body>
