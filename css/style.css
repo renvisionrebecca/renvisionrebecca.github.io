@@ -458,6 +458,26 @@ p {
   color: var(--coral-primary);
 }
 
+.footer-partner {
+  margin-bottom: var(--spacing-md);
+}
+
+.footer-partner-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gray-light);
+  margin-bottom: 0.5rem;
+}
+
+.footer-partner-logo {
+  height: 62px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  opacity: 0.85;
+}
+
 .footer-bottom {
   padding-top: var(--spacing-md);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
