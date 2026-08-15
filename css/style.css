@@ -15,7 +15,7 @@
   --black: #000000;
 
   /* Typography */
-  --font-heading: 'Playfair Display', serif;
+  --font-heading: 'bogart', sans-serif;
   --font-body: 'Montserrat', sans-serif;
 
   /* Spacing */
@@ -76,15 +76,12 @@ ul {
    ============================================ */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.2;
   margin-bottom: var(--spacing-sm);
 }
 
 h1 {
-  font-family: "bogart", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: clamp(2.5rem, 5vw, 4rem);
   letter-spacing: -0.02em;
 }
@@ -95,6 +92,11 @@ h2 {
 
 h3 {
   font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+h4, h5, h6 {
+  font-family: var(--font-body);
+  font-weight: 700;
 }
 
 p {
@@ -662,7 +664,7 @@ p {
 .stat-number {
   font-family: var(--font-heading);
   font-size: clamp(2.25rem, 4vw, 3.25rem);
-  font-weight: 900;
+  font-weight: 400;
   color: var(--coral-primary);
   line-height: 1;
 }
